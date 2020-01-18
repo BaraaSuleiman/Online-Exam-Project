@@ -1,0 +1,61 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title> Online Exam </title>
+		<link rel="stylesheet" type="text/css" href="bootstrap4/css/Bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<!-- Login page -->
+		<div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form name="frm"  class="login-form" onsubmit="return sbt()"><br>
+                            <h3 class="text-center text-secondary"><b>Login</b></h3><br>
+                            <div class="form-group">
+                                <label for="username" class="text-secondary"><b>Username:</b></label><br>
+                                <input type="text" name="user" id="username" class="form-control" placeholder="Please Enter Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label type="pa" for="pass" class="text-secondary"><b>Password:</b></label><br>
+                                <input type="password" name="pass" id="password" class="form-control" placeholder="Please Enter Your Password"><br>
+                            </div>
+                            <p id="para"></p>
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-secondary btn-md" value="Login">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    	<!-- Login page -->
+    	<script type="text/javascript">
+    		function sbt(){
+			var form = document.frm;
+			var user = form.elements["user"].value;
+			var pass = form.elements["pass"].value;
+			
+			if(user == "Admin" && pass == "123456"){
+				localStorage.setItem("username", "Admin");
+			var name = localStorage.getItem("username");
+				localStorage.setItem("password", "123456");
+			var password = localStorage.getItem("password");
+				window.location.href="startpage.html";
+				return false;
+			} else{
+				document.getElementById('para').innerHTML="Please Check Your Password!";
+				document.getElementById('para').style.color="red";
+				return false;
+			}
+		}
+    	</script>
+	</body>
+	</html>

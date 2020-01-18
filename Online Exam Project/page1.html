@@ -1,0 +1,93 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Exam Page</title>
+			<link rel="stylesheet" type="text/css" href="bootstrap4/css/Bootstrap.css">
+			<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+			<script type="text/javascript" src="jquery.js"></script>
+			<script type="text/javascript" src="jquery-ui.js"></script>
+			<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+			<style type="text/css">
+				body{
+					margin: 0;
+					padding: 0;
+				    background-image: linear-gradient(#595959,#dfebdf);
+				    background-repeat: no-repeat;
+				    background-size: cover;
+  					height: 100vh;
+				}
+				.jumbotron{
+					margin-top: 100px;
+					margin-left: 125px;
+					max-width: 80%;
+					height: 80%;
+					border: 1px solid #9C9C9C;
+					background-color: #EAEAEA;
+				}
+				.ra1{
+					  background-color: #2196F3;
+					  display: block;
+					  position: relative;
+					  padding:10px 10px 10px 50px;
+					  margin-bottom: 1px;
+					  cursor: pointer;
+					  font-size: 40px;
+					  word-wrap: break-word;
+					  border-radius: 1px;
+					  background: white;
+					  display: block;
+					  text-align: center;
+				}
+				.radiocontainer {
+					  background-color: #2196F3;
+					  display: block;
+					  position: relative;
+					  padding:10px 10px 10px 50px;
+					  margin-bottom: 1px;
+					  cursor: pointer;
+					  font-size: 20px;
+					  word-wrap: break-word;
+					  border-radius: 1px;
+					  background: white;
+					  display: block;
+					}
+					.radiocontainer:hover {
+					  background-color: #ddd;
+					}
+			</style>
+	</head>
+	<body>
+			<div class="jumbotron">
+				<h2>Question 1 of 10:</h2><br>
+			<div class="container" id="quizForm">
+		  	<form name="quizForm" onsubmit="return subitAnswers()">
+			<div style="position:relative;width:100%;">
+		    <div id="altcontainer">
+			<label class="ra1"><h4> How can you get the total number of arguments passed to a function?</h4></label><br>
+			<label class="radiocontainer" ><input type="radio" name="answer1" value="Using args.length property."required=""> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using args.length property.</label><br>
+			<label class="radiocontainer" ><input type="radio" name="answer1" value="Using arguments.length property."> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Using arguments.length property.</label><br>
+			<label class="radiocontainer" ><input type="radio" name="answer1" value="All of the above."> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All of the above.</label><br>
+			<p class="lead text-left">
+		  			<input type="submit" name="" id="checked" class="btn btn-secondary btn-lg" value="Next">
+		  		</p>
+		        </div>
+		      </div>
+			</form>
+		</div>
+	</div>
+			<script type="text/javascript">
+			function subitAnswers(){
+				var form = document.quizForm;
+				var q1 = form.elements['answer1'].value;
+				var mark = 0;
+				localStorage.setItem("qsn1",q1);
+				if(q1 == "All of the above.") {
+				mark++;
+			}
+				localStorage.setItem("score",mark);
+				window.location.href="page2.html";
+				return false;
+			}
+			</script>
+	</body>
+	</html>

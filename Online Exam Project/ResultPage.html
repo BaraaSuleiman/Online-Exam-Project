@@ -1,0 +1,204 @@
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<title>Result Page</title>
+			<link rel="stylesheet" type="text/css" href="bootstrap4/css/Bootstrap.css">
+			<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+			<script type="text/javascript" src="jquery.js"></script>
+			<script type="text/javascript" src="jquery-ui.js"></script>
+			<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+      <style type="text/css">
+        body{
+          margin: 0;
+          padding: 0;
+          background-color: #bababa;
+        }
+        .table{
+          background-color : #a8a69e;
+          border-color: black;
+        }
+        #demo{
+          border-style: solid;
+          border-color: black;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 30px;
+        }
+        #bt3, #bt2{
+          border: 2px solid black;
+          border-radius: 25px;
+          width: 500px;
+          height: 50px;
+          margin-top: 50px;
+        }
+      </style>
+		</head>
+		<body>
+      <div class="container text-center">
+			<h2 id="demo" class="text-left mt-4"></h2><br>
+      <button id="bt3" class="btn btn-dark">Please click to get your Grade</button><br><br>
+      <button id="bt2" class="btn btn-dark">Please click to get the Answar Table</button><br><br>
+			<table class="table" id="tab1" border="1px">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Correct Answer</th>
+      <th scope="col">Your Answer</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>All of the above.</td>
+      <td id="a1"></td>
+   
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>var book = new Object();</td>
+      <td id="a2"></td>
+      
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>toPrecision()</td>
+      <td id="a3"></td>
+ 
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>match()</td>
+      <td id="a4"></td>
+ 
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>some()</td>
+      <td id="a5"></td>
+ 
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td>toUpperCase()</td>
+      <td id="a6"></td>
+ 
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td>link()</td>
+      <td id="a7"></td>
+ 
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td>push()</td>
+      <td id="a8"></td>
+ 
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td>Function/Method</td>
+      <td id="a9"></td>
+ 
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td>If(a!==null)</td>
+      <td id="a10"> </td>
+ 
+    </tr>
+  </tbody>
+</table>
+</div>
+			<script type="text/javascript">
+    $("document").ready(function (){
+      $("tr:odd").css("backgroundColor","gray");
+      $("tr:first").css("backgroundColor","#8a8a8a");
+      $("#demo").hide();
+      $("#bt3").click(function(){
+      $("#demo").toggle(1000);
+      });
+      $("#tab1").hide();
+      $("#bt2").click(function(){
+      $("#tab1").toggle(1000);
+      });
+    });
+			var score1=localStorage.getItem("score");
+			var ans1=localStorage.getItem("qsn1");
+			var ans2=localStorage.getItem("qsn2");
+			var ans3=localStorage.getItem("qsn3");
+			var ans4=localStorage.getItem("qsn4");
+			var ans5=localStorage.getItem("qsn5");
+			var ans6=localStorage.getItem("qsn6");
+			var ans7=localStorage.getItem("qsn7");
+			var ans8=localStorage.getItem("qsn8");
+			var ans9=localStorage.getItem("qsn9");
+			var ans10=localStorage.getItem("qsn10");
+
+
+			document.getElementById('demo').innerHTML='Your Grade is :  '+score1+ ' ,Please check the answar table ';
+			document.getElementById('a1').innerHTML=ans1;
+			document.getElementById('a2').innerHTML=ans2;
+			document.getElementById('a3').innerHTML=ans3;
+			document.getElementById('a4').innerHTML=ans4;
+			document.getElementById('a5').innerHTML=ans5;
+			document.getElementById('a6').innerHTML=ans6;
+			document.getElementById('a7').innerHTML=ans7;
+			document.getElementById('a8').innerHTML=ans8;
+			document.getElementById('a9').innerHTML=ans9;
+			document.getElementById('a10').innerHTML=ans10;
+
+      if( ans1 == "All of the above." ){
+document.getElementById('a1').style.backgroundColor='#00cc44';
+} else{
+ document.getElementById('a1').style.backgroundColor='#ff1a1a';
+}
+if( ans2 == "var book = new Object();" ){
+document.getElementById('a2').style.backgroundColor='#00cc44';
+} else{
+ document.getElementById('a2').style.backgroundColor='#ff1a1a';
+}
+if( ans3 == "toPrecision()" ){
+document.getElementById('a3').style.backgroundColor='#00cc44';
+} else{
+ document.getElementById('a3').style.backgroundColor='#ff1a1a';
+}
+if( ans4 == "match()" ){
+document.getElementById('a4').style.backgroundColor='#00cc44';
+} else{
+ document.getElementById('a4').style.backgroundColor='#ff1a1a';
+}
+if( ans5 == "some()" ){
+document.getElementById('a5').style.backgroundColor='#00cc44';
+} else{
+ document.getElementById('a5').style.backgroundColor='#ff1a1a';
+}
+if( ans6 == "toUpperCase()" ){
+document.getElementById('a6').style.backgroundColor='#00cc44';
+} else{
+ document.getElementById('a6').style.backgroundColor='#ff1a1a';
+}
+if( ans7 == "link()" ){
+document.getElementById('a7').style.backgroundColor='#00cc44';
+} else{
+ document.getElementById('a7').style.backgroundColor='#ff1a1a';
+}
+if( ans8 == "push()" ){
+document.getElementById('a8').style.backgroundColor='#00cc44';
+} else{
+ document.getElementById('a8').style.backgroundColor='#ff1a1a';
+}
+if( ans9 == "Function/Method" ){
+document.getElementById('a9').style.backgroundColor='#00cc44';
+} else{
+ document.getElementById('a9').style.backgroundColor='#b30000';
+}
+if( ans10 == "If(a!==null)" ){
+document.getElementById('a10').style.backgroundColor='#00cc44';
+} else{
+ document.getElementById('a10').style.backgroundColor='#b30000';
+}
+			</script>	
+		</body>
+		</html>

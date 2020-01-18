@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Start Page</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap4/css/Bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+		<form name="frm"  class="" onsubmit= "return sbt()">
+			<div class="jumbotron">
+			  <div class="container">
+			  	<h1 class="text-center text-secondary"><b>Javascript Online Exam</b></h1>
+		   	 	<h2 class="text-center text-secondary"><b>Examination Rules</b></h2><br>
+		   	 	<h3 class="lead"><b>During the exam:</b></h3>
+		    	<ul>
+		    		<li>The student may not use his or her textbook, course notes, or receive help from a proctor or any other outside source.</li>
+		    		<li>Students must complete the 10-question multiple-choice exam within the 30-minute.
+					</li>
+		    		<li>Students must not stop the session and then return to it. This is especially important in the online environment where the system will "time-out" and not allow the student or you to reenter the exam site.</li>
+		    		<li>Close all programs, including email.</li>
+		    		<li>To begin the exam, click on the acceptance button then cleck on Starst The Exam.</li>
+		    	</ul><br><br>
+		  		<p class="lead text-right">
+		  			<input type="submit" name="" id="checked" class="btn btn-secondary btn-lg" value="Start The Exam">
+		  		</p>
+				  </div>
+				</div>
+			</div>
+		</form>
+		<script type="text/javascript">
+			var form = document.frm;
+    		function sbt(){
+    			window.location.href="page1.html";
+    			return false;
+    		};
+    	</script>
+</body>
+</html>
